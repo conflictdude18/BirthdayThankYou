@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcomeScreen">
+    <h1>🎂 Welcome 🎂</h1>
+    <p>Enter your name to receive a special thank you 💖</p>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button id="enterBtn">Enter</button>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent" class="hidden">
+    <div class="container">
+      <h1 id="personalHeading">🎉 Thank You Everyone 🎉</h1>
+      <p class="message" id="personalMessage">
+        I’m truly grateful for all the wonderful birthday wishes I received from all of you across different platforms.  
+        Your love, blessings, and kind words made my day extra special 💖.
+      </p>
+
+      <button id="surpriseBtn">Click for a Surprise 🎁</button>
+
+      <div class="confetti" id="confetti"></div>
+
+      <footer>
+        <p>With Love,<br><strong>Anshul</strong></p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

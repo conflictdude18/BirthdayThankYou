@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  text-align: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+button {
+  background: #fff;
+  color: #ff4d6d;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+ transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:hover {
+  background: #ff4d6d;
+  color: #fff;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Hide main content initially */
+.hidden {
+  display: none;
+}
+
+/* Welcome Screen Styling */
+#welcomeScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+  animation: gradientBG 15s ease infinite;
+}
+
+#welcomeScreen h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+#welcomeScreen p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+#welcomeScreen button {
+  background: #fff;
+  color: #ff4d6d;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#welcomeScreen button:hover {
+  background: #ff4d6d;
+  color: #fff;
+}
+
+#welcomeScreen input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  text-align: center;
+}
