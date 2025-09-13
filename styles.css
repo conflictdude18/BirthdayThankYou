@@ -1,0 +1,338 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5c3e6, #b19cd9, #87ceeb);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Confetti */
+.confetti-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.8;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.bouncing-text {
+    font-size: 2.5rem;
+    color: #d4418e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+    margin-bottom: 30px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Cake Animation */
+.cake {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+.cake-base {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    width: 80px;
+    height: 40px;
+    background: #f8bbd0;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.cake-top {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    width: 100px;
+    height: 30px;
+    background: #f48fb1;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.candle {
+    position: absolute;
+    bottom: 70px;
+    left: 55px;
+    width: 10px;
+    height: 20px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.flame {
+    position: absolute;
+    top: -15px;
+    left: 2px;
+    width: 6px;
+    height: 15px;
+    background: #ff9800;
+    border-radius: 50% 50% 20% 20%;
+    animation: flicker 0.8s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+.decoration {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffeb3b;
+}
+
+.decoration-1 {
+    bottom: 50px;
+    left: 25px;
+}
+
+.decoration-2 {
+    bottom: 50px;
+    left: 60px;
+}
+
+.decoration-3 {
+    bottom: 50px;
+    left: 95px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Form Styles */
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-out;
+}
+
+.instruction {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #d4418e;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input {
+    padding: 12px 15px;
+    border: 2px solid #b19cd9;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    min-width: 250px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #d4418e;
+    box-shadow: 0 0 10px rgba(212, 65, 142, 0.3);
+}
+
+button {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #d4418e, #b19cd9);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Thank You Message */
+.thank-you-message {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: popIn 0.5s ease-out;
+}
+
+.thank-you-message h2 {
+    font-size: 2rem;
+    color: #d4418e;
+    margin-bottom: 20px;
+    animation: colorChange 2s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #d4418e;
+    }
+    50% {
+        color: #b19cd9;
+    }
+    100% {
+        color: #ff9800;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hearts Animation */
+.floating-hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: #e91e63;
+    opacity: 0;
+    animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bouncing-text {
+        font-size: 2rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    input {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bouncing-text {
+        font-size: 1.5rem;
+    }
+    
+    .instruction {
+        font-size: 1rem;
+    }
+    
+    .form-container, .thank-you-message {
+        padding: 20px;
+    }
+}
